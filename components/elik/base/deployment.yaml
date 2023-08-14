@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: elik
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-hbsy-tenant/byoc-app-owyp/elik@sha256:769dfe6fba9b670fbd529c20e56c5480f6448ebd29593ba9422e2005a9b1bd20
         name: my-java-quarkus
         ports:
         - containerPort: 8081
