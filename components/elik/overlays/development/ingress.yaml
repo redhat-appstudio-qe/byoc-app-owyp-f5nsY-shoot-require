@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: elik
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: elik
+    app.kubernetes.io/part-of: byoc-app-owyp
+  name: elik
+spec:
+  rules:
+  - host: elik-byoc-hbsy-tenant.apps.0f95a1905674d81f8d29.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: elik
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

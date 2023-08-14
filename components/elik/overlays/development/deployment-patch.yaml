@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: elik
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-hbsy-tenant/byoc-app-owyp/elik@sha256:769dfe6fba9b670fbd529c20e56c5480f6448ebd29593ba9422e2005a9b1bd20
+        name: my-java-quarkus
+        resources: {}
+status: {}
